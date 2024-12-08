@@ -1,0 +1,51 @@
+{
+    "query_name": "",
+    "children": [
+        {
+            "operator_cardinality": 1,
+            "operator_rows_scanned": 0,
+            "operator_timing": 0.000004405,
+            "operator_type": "STREAMING_LIMIT",
+            "children": [
+                {
+                    "operator_cardinality": 1,
+                    "operator_rows_scanned": 0,
+                    "operator_timing": 0.0005036750000000001,
+                    "operator_type": "UNGROUPED_AGGREGATE",
+                    "children": [
+                        {
+                            "operator_cardinality": 118598,
+                            "operator_rows_scanned": 0,
+                            "operator_timing": 0.0004156590000000001,
+                            "operator_type": "PROJECTION",
+                            "children": [
+                                {
+                                    "operator_cardinality": 118598,
+                                    "operator_rows_scanned": 0,
+                                    "operator_timing": 0.026961452999999996,
+                                    "operator_type": "HASH_JOIN",
+                                    "children": [
+                                        {
+                                            "operator_cardinality": 118598,
+                                            "operator_rows_scanned": 24004860,
+                                            "operator_timing": 0.17997584099999991,
+                                            "operator_type": "TABLE_SCAN",
+                                            "children": []
+                                        },
+                                        {
+                                            "operator_cardinality": 365,
+                                            "operator_rows_scanned": 2556,
+                                            "operator_timing": 0.000047487,
+                                            "operator_type": "TABLE_SCAN",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

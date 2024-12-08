@@ -1,0 +1,137 @@
+{
+    "query_name": "",
+    "children": [
+        {
+            "operator_cardinality": 4,
+            "operator_rows_scanned": 0,
+            "operator_timing": 0.00009816600000000001,
+            "operator_type": "TOP_N",
+            "children": [
+                {
+                    "operator_cardinality": 4,
+                    "operator_rows_scanned": 0,
+                    "operator_timing": 0.000021418,
+                    "operator_type": "PROJECTION",
+                    "children": [
+                        {
+                            "operator_cardinality": 4,
+                            "operator_rows_scanned": 0,
+                            "operator_timing": 0.0018656319999999999,
+                            "operator_type": "HASH_GROUP_BY",
+                            "children": [
+                                {
+                                    "operator_cardinality": 465,
+                                    "operator_rows_scanned": 0,
+                                    "operator_timing": 0.000003808,
+                                    "operator_type": "PROJECTION",
+                                    "children": [
+                                        {
+                                            "operator_cardinality": 465,
+                                            "operator_rows_scanned": 0,
+                                            "operator_timing": 0.000071529,
+                                            "operator_type": "PROJECTION",
+                                            "children": [
+                                                {
+                                                    "operator_cardinality": 465,
+                                                    "operator_rows_scanned": 0,
+                                                    "operator_timing": 0.001932088,
+                                                    "operator_type": "HASH_JOIN",
+                                                    "children": [
+                                                        {
+                                                            "operator_cardinality": 60474,
+                                                            "operator_rows_scanned": 0,
+                                                            "operator_timing": 0.001698386,
+                                                            "operator_type": "PROJECTION",
+                                                            "children": [
+                                                                {
+                                                                    "operator_cardinality": 60474,
+                                                                    "operator_rows_scanned": 0,
+                                                                    "operator_timing": 0.17780209099999983,
+                                                                    "operator_type": "HASH_JOIN",
+                                                                    "children": [
+                                                                        {
+                                                                            "operator_cardinality": 7718437,
+                                                                            "operator_rows_scanned": 0,
+                                                                            "operator_timing": 0.028830442000000005,
+                                                                            "operator_type": "PROJECTION",
+                                                                            "children": [
+                                                                                {
+                                                                                    "operator_cardinality": 7718437,
+                                                                                    "operator_rows_scanned": 0,
+                                                                                    "operator_timing": 3.238397289999987,
+                                                                                    "operator_type": "HASH_JOIN",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "operator_cardinality": 7718437,
+                                                                                            "operator_rows_scanned": 1200075804,
+                                                                                            "operator_timing": 14.99339832099998,
+                                                                                            "operator_type": "TABLE_SCAN",
+                                                                                            "children": []
+                                                                                        },
+                                                                                        {
+                                                                                            "operator_cardinality": 31,
+                                                                                            "operator_rows_scanned": 2556,
+                                                                                            "operator_timing": 0.00010488600000000001,
+                                                                                            "operator_type": "TABLE_SCAN",
+                                                                                            "children": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "operator_cardinality": 24063,
+                                                                            "operator_rows_scanned": 0,
+                                                                            "operator_timing": 0.00043285700000000003,
+                                                                            "operator_type": "PROJECTION",
+                                                                            "children": [
+                                                                                {
+                                                                                    "operator_cardinality": 24063,
+                                                                                    "operator_rows_scanned": 0,
+                                                                                    "operator_timing": 0.05984120799999998,
+                                                                                    "operator_type": "FILTER",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "operator_cardinality": 2999999,
+                                                                                            "operator_rows_scanned": 6000000,
+                                                                                            "operator_timing": 0.034003939999999996,
+                                                                                            "operator_type": "TABLE_SCAN",
+                                                                                            "children": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "operator_cardinality": 1630,
+                                                            "operator_rows_scanned": 0,
+                                                            "operator_timing": 0.004107336,
+                                                            "operator_type": "FILTER",
+                                                            "children": [
+                                                                {
+                                                                    "operator_cardinality": 200000,
+                                                                    "operator_rows_scanned": 400000,
+                                                                    "operator_timing": 0.001316096,
+                                                                    "operator_type": "TABLE_SCAN",
+                                                                    "children": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

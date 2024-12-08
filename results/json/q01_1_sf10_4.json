@@ -1,0 +1,51 @@
+{
+    "query_name": "",
+    "children": [
+        {
+            "operator_cardinality": 1,
+            "operator_rows_scanned": 0,
+            "operator_timing": 0.000001972,
+            "operator_type": "STREAMING_LIMIT",
+            "children": [
+                {
+                    "operator_cardinality": 1,
+                    "operator_rows_scanned": 0,
+                    "operator_timing": 0.004455005000000001,
+                    "operator_type": "UNGROUPED_AGGREGATE",
+                    "children": [
+                        {
+                            "operator_cardinality": 1193001,
+                            "operator_rows_scanned": 0,
+                            "operator_timing": 0.0033837489999999997,
+                            "operator_type": "PROJECTION",
+                            "children": [
+                                {
+                                    "operator_cardinality": 1193001,
+                                    "operator_rows_scanned": 0,
+                                    "operator_timing": 0.25335527200000024,
+                                    "operator_type": "HASH_JOIN",
+                                    "children": [
+                                        {
+                                            "operator_cardinality": 1193001,
+                                            "operator_rows_scanned": 239944208,
+                                            "operator_timing": 1.804039649999999,
+                                            "operator_type": "TABLE_SCAN",
+                                            "children": []
+                                        },
+                                        {
+                                            "operator_cardinality": 365,
+                                            "operator_rows_scanned": 2556,
+                                            "operator_timing": 0.000041913000000000003,
+                                            "operator_type": "TABLE_SCAN",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
