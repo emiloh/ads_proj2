@@ -1,0 +1,148 @@
+{
+    "all_optimizers": 0.0006853149999999999,
+    "cumulative_optimizer_timing": 0.0006836570000000001,
+    "planner": 0.000389978,
+    "planner_binding": 0.000387306,
+    "physical_planner": 0.000047514999999999995,
+    "physical_planner_column_binding": 0.000007475,
+    "physical_planner_resolve_types": 0.000001992,
+    "physical_planner_create_plan": 0.000032275,
+    "optimizer_expression_rewriter": 0.000158735,
+    "optimizer_filter_pullup": 0.000003581,
+    "optimizer_filter_pushdown": 0.000185387,
+    "optimizer_cte_filter_pusher": 0.000001439,
+    "optimizer_regex_range": 0.00000103,
+    "optimizer_in_clause": 0.000003111,
+    "optimizer_join_order": 0.000151408,
+    "rows_returned": 1,
+    "optimizer_reorder_filter": 0.000013117,
+    "latency": 1.058817369,
+    "optimizer_duplicate_groups": 0.000005997,
+    "result_set_size": 16,
+    "optimizer_join_filter_pushdown": 0.000021407,
+    "optimizer_compressed_materialization": 0.0,
+    "optimizer_top_n": 0.00000116,
+    "cumulative_rows_scanned": 119974660,
+    "optimizer_limit_pushdown": 0.000001115,
+    "optimizer_build_side_probe_side": 0.000012868,
+    "optimizer_column_lifetime": 0.00001719,
+    "cumulative_cardinality": 3579370,
+    "optimizer_common_aggregate": 0.000007162,
+    "extra_info": {},
+    "optimizer_common_subexpressions": 0.000010644,
+    "cpu_time": 2.0407677089999905,
+    "optimizer_statistics_propagation": 0.000071856,
+    "blocked_thread_time": 0.0,
+    "optimizer_unused_columns": 0.00001413,
+    "query_name": "",
+    "optimizer_unnest_rewriter": 0.000001046,
+    "optimizer_materialized_cte": 0.0,
+    "optimizer_extension": 0.0,
+    "optimizer_deliminator": 0.000001274,
+    "children": [
+        {
+            "result_set_size": 16,
+            "operator_timing": 0.000002313,
+            "operator_rows_scanned": 0,
+            "cumulative_rows_scanned": 119974660,
+            "operator_cardinality": 1,
+            "operator_type": "STREAMING_LIMIT",
+            "cumulative_cardinality": 3579370,
+            "extra_info": {},
+            "cpu_time": 2.0407677089999905,
+            "children": [
+                {
+                    "result_set_size": 16,
+                    "operator_timing": 0.004414057999999999,
+                    "operator_rows_scanned": 0,
+                    "cumulative_rows_scanned": 119974660,
+                    "operator_cardinality": 1,
+                    "operator_type": "UNGROUPED_AGGREGATE",
+                    "cumulative_cardinality": 3579369,
+                    "extra_info": {
+                        "Aggregates": "sum(#0)"
+                    },
+                    "cpu_time": 2.0407653959999905,
+                    "children": [
+                        {
+                            "result_set_size": 4772004,
+                            "operator_timing": 0.003174152999999999,
+                            "operator_rows_scanned": 0,
+                            "cumulative_rows_scanned": 119974660,
+                            "operator_cardinality": 1193001,
+                            "operator_type": "PROJECTION",
+                            "cumulative_cardinality": 3579368,
+                            "extra_info": {
+                                "Projections": "(LO_EXTENDEDPRICE * CAST(LO_DISCOUNT AS INTEGER))",
+                                "Estimated Cardinality": "3302980"
+                            },
+                            "cpu_time": 2.0363513379999905,
+                            "children": [
+                                {
+                                    "result_set_size": 15509013,
+                                    "operator_timing": 0.24055665700000015,
+                                    "operator_rows_scanned": 0,
+                                    "cumulative_rows_scanned": 119974660,
+                                    "operator_cardinality": 1193001,
+                                    "operator_type": "HASH_JOIN",
+                                    "cumulative_cardinality": 2386367,
+                                    "extra_info": {
+                                        "Join Type": "INNER",
+                                        "Conditions": "LO_ORDERDATE = D_DATEKEY",
+                                        "Build Min": "1992-01-01",
+                                        "Build Max": "1998-12-30",
+                                        "Estimated Cardinality": "3302980"
+                                    },
+                                    "cpu_time": 2.0331771849999907,
+                                    "children": [
+                                        {
+                                            "result_set_size": 10737009,
+                                            "operator_timing": 1.7925744919999906,
+                                            "operator_rows_scanned": 119972104,
+                                            "cumulative_rows_scanned": 119972104,
+                                            "operator_cardinality": 1193001,
+                                            "operator_type": "TABLE_SCAN",
+                                            "cumulative_cardinality": 1193001,
+                                            "extra_info": {
+                                                "Text": "lineorder",
+                                                "Projections": [
+                                                    "LO_ORDERDATE",
+                                                    "LO_DISCOUNT",
+                                                    "LO_EXTENDEDPRICE"
+                                                ],
+                                                "Filters": [
+                                                    "LO_DISCOUNT>=1 AND LO_DISCOUNT<=3 AND LO_DISCOUNT IS NOT NULL",
+                                                    "LO_QUANTITY<25 AND LO_QUANTITY IS NOT NULL"
+                                                ],
+                                                "Estimated Cardinality": "11997210"
+                                            },
+                                            "cpu_time": 1.7925744919999906,
+                                            "children": []
+                                        },
+                                        {
+                                            "result_set_size": 1460,
+                                            "operator_timing": 0.000046036,
+                                            "operator_rows_scanned": 2556,
+                                            "cumulative_rows_scanned": 2556,
+                                            "operator_cardinality": 365,
+                                            "operator_type": "TABLE_SCAN",
+                                            "cumulative_cardinality": 365,
+                                            "extra_info": {
+                                                "Text": "date",
+                                                "Projections": "D_DATEKEY",
+                                                "Filters": "D_YEAR=1993 AND D_YEAR IS NOT NULL",
+                                                "Estimated Cardinality": "639"
+                                            },
+                                            "cpu_time": 0.000046036,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
